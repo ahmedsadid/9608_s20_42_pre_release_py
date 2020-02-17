@@ -11,13 +11,10 @@ TASK 2 implemented via:
       
           (# O(log n) access within slots, O(1) access to hashed location)
           
-      3. Chaining using singly linked lists — TASK 2_CHAIN.py ^
+      3. Chaining using singly linked lists — TASK 2_CHAIN.py 
       
           (# O(n) access within slots, O(1) access to hashed location)
           
 TASK 3 simply implemented via recusrsion. 
-
-
-^May contain isssues. 
 
 ---Send queries to ahmedsadid17@yahoo.com---
