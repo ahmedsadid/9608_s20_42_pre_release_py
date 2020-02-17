@@ -3,7 +3,7 @@
 #=====================================================================================================
 
 ##  T A S K 2.3
- 
+
 # listLen  : INTEGER
 # cust     : STRING
 # x , i, v : INTEGER
@@ -60,6 +60,8 @@ class Node:
         #   sData :  STRING
         if self.data == sData:
             return True
+        elif self.data == None:
+            return False
         elif sData < self.data and self.left:
             return self.left.find(sData)
         elif sData > self.data and self.right:
@@ -70,7 +72,8 @@ class Node:
 
 # hashTab : ARRAY[0:listLen] of Node
 
-hashTab = [Node(None)]*listLen
+hashTab = [Node(None) for _ in range(listLen)]
+
 
 def insertHash(id):
     # id      : STRING
@@ -97,13 +100,20 @@ def searchTab(searchID):
         print("ID not found")
 
 
+
 """
 insertHash("CC0110")
 insertHash("AA0001")
 insertHash("ZZ9999")
 insertHash("BB2222")
+insertHash("BB2223")
 
-searchTab("AA0001")
-searchTab("KK6969")
+searchTab("AA0001") #positive
+searchTab("KK6969") #negative
+
+"""
+"""
+for n in range(listLen):
+    print(hashTab[n].data)
 """
 
