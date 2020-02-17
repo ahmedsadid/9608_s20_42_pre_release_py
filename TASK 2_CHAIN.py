@@ -76,8 +76,7 @@ class LinkedList:
 
 
 # hashTab : ARRAY[0:listLen] of Node
-
-hashTab = [LinkedList()]*listLen
+hashTab = [LinkedList() for _ in range(listLen)]
 
 def insertHash(id):
     # id      : STRING
@@ -102,6 +101,8 @@ def searchTab(searchID):
     else:
         print("ID not found")
 
+
+
 """
 insertHash("CC0110")
 insertHash("AA0001")
@@ -109,14 +110,9 @@ insertHash("ZZ9999")
 insertHash("BB2222")
 
 searchTab("AA0001") #positive
-searchTab("KK6969") #negative
+searchTab("KK6969") #negative 
 
-print(hashTab[0].head.pointer.data)
+
+print(hashTab[1].head.data)
+print(hashTab[0].head.data)
 """
-
-
-
-            
-
-
-
